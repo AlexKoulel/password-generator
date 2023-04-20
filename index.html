@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Password Generator</title>
 </head>
 <body>
-    <p id="password"> </p>
-    <input type="number" id="password-length" min="3" max="64" placeholder="10">
-    <button id="generate-button">Generate Password</button>
-    <script src="./main.ts"></script>
+    <div class="app">
+        <div class="title">
+            <h1>Password Generator</h1>
+        </div>
+        <div class="result">
+            <input type="text" id="password" readonly>
+            <button id="copy">Copy</button>
+        </div>
+        <div class = "preferences">
+            <div class="length">
+                <input type="range" id="password-length" min="4" max="32" step="1">
+                <span id="password-length-result">3</span>
+            </div>
+            <div class="characters">
+                <div class="lowercase">
+                    <input type="checkbox" id="lowercase" name="lower-case-letters" value="lowercase">
+                    <label for="lowercase">Lower Case</label>
+                </div>
+                <div class="numbers">
+                    <input type="checkbox" id="numbers" name="numbers" value="numbers">
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div class="symbols">
+                    <input type="checkbox" id="symbols" name="symbols" value="symbols">
+                    <label for="symbols">Symbols</label>
+                </div>
+            </div>
+            <button id="generate-button">Generate Password</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Made by <a href="https://github.com/AlexKoulel">Alexandros Koulelis</a></p>
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
